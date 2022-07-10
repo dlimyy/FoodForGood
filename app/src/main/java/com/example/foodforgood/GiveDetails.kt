@@ -1,5 +1,6 @@
 package com.example.foodforgood
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -48,6 +49,16 @@ class GiveDetails : AppCompatActivity() {
                     ,Snackbar.LENGTH_SHORT).show()
             }
         }
+
+        binding.giverDetailsBackButton.setOnClickListener {
+            startActivity(Intent(this, Giver::class.java))
+            finish()
+        }
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(this, Giver::class.java))
+        finish()
     }
 
     private fun checkAddress(address : String) : Boolean {

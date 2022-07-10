@@ -26,4 +26,10 @@ class Guide : AppCompatActivity() {
             finish()
         }
     }
+
+    override fun onBackPressed() {
+        val intent: Intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
 }

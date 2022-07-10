@@ -27,6 +27,15 @@ class Giver : AppCompatActivity() {
             startActivity(Intent(this, GiveDetails::class.java))
             finish()
         }
+        binding.giverBackButton.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 
     private fun getData() {

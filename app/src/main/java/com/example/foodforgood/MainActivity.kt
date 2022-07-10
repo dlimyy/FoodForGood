@@ -13,9 +13,29 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
         binding.homePageGiver.setOnClickListener {
             startActivity(Intent(this, Giver::class.java))
+            finish()
         }
         binding.homePageCollector.setOnClickListener {
             startActivity(Intent(this, Collector::class.java))
+            finish()
         }
+        binding.homePageGuide.setOnClickListener {
+            startActivity(Intent(this,Guide::class.java))
+            finish()
+        }
+        binding.logOutButton.setOnClickListener {
+            startActivity(Intent(this, LoginPage::class.java))
+            finish()
+        }
+
+        binding.homePageLeaderboard.setOnClickListener {
+            startActivity(Intent(this,LeaderBoard::class.java))
+            finish()
+        }
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(this, LoginPage::class.java))
+        finish()
     }
 }

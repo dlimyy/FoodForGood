@@ -77,6 +77,15 @@ class ReservePage : AppCompatActivity() {
 
         })
 
+        binding.reserveBackButton.setOnClickListener {
+            startActivity(Intent(this,Collector::class.java))
+            finish()
+        }
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(this,Collector::class.java))
+        finish()
     }
 
     private fun getData() {

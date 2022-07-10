@@ -27,6 +27,15 @@ class Collector : AppCompatActivity() {
         binding.collectorRecyclerView.layoutManager = LinearLayoutManager(this)
         adaptor = GiverCardViewAdaptor(collectorArray)
         binding.collectorRecyclerView.adapter = adaptor
+        binding.collectorBackButton.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 
     private fun getData() {
@@ -41,7 +50,7 @@ class Collector : AppCompatActivity() {
                             collector.get("Address") as String, collector.get("Postal Code") as String
                             , collector.get("Region") as String, collector.get("Halal") as String)
                     )
-//                    binding.offerGift.visibility = View.GONE
+                    binding.reserveFood.visibility = View.GONE
                     adaptor.notifyItemInserted(counter)
                     counter++
                 }
