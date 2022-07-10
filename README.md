@@ -45,3 +45,9 @@ Our initiative’s focus will seek to move towards forging tight knit partnershi
 
 ## Built with
 Kotlin, XML, Firebase Authentication, Firebase Data Storage
+
+##Link for apk file for testing
+https://drive.google.com/file/d/1ArdsG0HetXHYIJNI7cA8A5jHmOwhBEyR/view?usp=sharing
+
+##Acknowledgements
+"Icon made by Freepik from www.flaticon.com"
