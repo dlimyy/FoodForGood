@@ -4,6 +4,174 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".GiveDetails">
+
+    <ImageView
+        android:id="@+id/giverDetailsBackButton"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/_10sdp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_16sdp"
+        app:cardBackgroundColor="#FFA726"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintTop_toBottomOf="@id/giverDetailsBackButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                app:endIconMode="clear_text"
+                app:boxStrokeWidth="0dp"
+                android:hint="@string/address"
+                android:layout_marginHorizontal="@dimen/_16sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/giverAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="@dimen/_12ssp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/postalCodeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                app:endIconMode="clear_text"
+                app:boxStrokeWidth="0dp"
+                android:hint="@string/postalCode"
+                android:layout_marginHorizontal="@dimen/_16sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/postalCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="@dimen/_12ssp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/FoodTypeLayout"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="wrap_content"
+                    app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                    app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                    app:endIconMode="clear_text"
+                    app:boxStrokeWidth="0dp"
+                    android:hint="@string/foodType"
+                    android:layout_marginEnd="@dimen/_16sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/foodType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textSize="@dimen/_12ssp"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/quantityLayout"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="wrap_content"
+
+                    app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                    app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                    app:endIconMode="clear_text"
+                    app:boxStrokeWidth="0dp"
+                    android:hint="@string/foodQuantity">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/foodQuantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textSize="@dimen/_12ssp"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/halal"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:textSize="@dimen/_28ssp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/halalButtonToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:singleSelection="true"
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/halalYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/yes"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/halalNo"
+                    android:backgroundTint="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="@string/no"/>
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/giverSubmitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_32sdp"
+                android:text="@string/submit"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

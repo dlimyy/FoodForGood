@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardBackgroundColor="#FFCA28">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/diet"
+            android:layout_margin="@dimen/_16sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/foodTypeGiver"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/foodType"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp"/>
+
+            <TextView
+                android:id="@+id/foodQuantityGiver"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/foodQuantity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"/>
+
+            <TextView
+                android:id="@+id/giverAddress"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"/>
+
+            <TextView
+                android:id="@+id/giverHalal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/halal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

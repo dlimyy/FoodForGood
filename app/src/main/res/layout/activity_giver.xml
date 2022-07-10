@@ -7,4 +7,61 @@
     android:background="@drawable/background"
     tools:context=".Giver">
 
+    <ImageView
+        android:id="@+id/giverBackButton"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/_10sdp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/giverGiveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:textSize="@dimen/_20ssp"
+        app:cornerRadius="@dimen/_10sdp"
+        android:backgroundTint="#D32F2F"
+        app:layout_constraintTop_toBottomOf="@id/giverBackButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingHorizontal="@dimen/_32sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="@string/give"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/giveCardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="#FFB300"
+        app:layout_constraintTop_toBottomOf="@id/giverGiveButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintVertical_bias="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/giverRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/offerGift"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_32ssp"
+            android:text="Please offer a gift"
+            android:fontFamily="@font/alegreya"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

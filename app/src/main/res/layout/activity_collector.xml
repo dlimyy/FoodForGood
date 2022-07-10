@@ -4,6 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".Collector">
+
+    <ImageView
+        android:id="@+id/collectorBackButton"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/_10sdp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/collectorReserveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:textSize="@dimen/_20ssp"
+        app:cornerRadius="@dimen/_10sdp"
+        android:backgroundTint="#D32F2F"
+        app:layout_constraintTop_toBottomOf="@id/collectorBackButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingHorizontal="@dimen/_32sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="@string/reserve"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="#FFB300"
+        app:layout_constraintTop_toBottomOf="@id/collectorReserveButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintVertical_bias="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id ="@+id/collectorRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

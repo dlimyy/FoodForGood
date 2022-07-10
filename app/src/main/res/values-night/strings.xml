@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="foodQuantity">Food Quantity</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="submit">Submit</string>
+    <string name="all">All</string>
+    <string name="north">North</string>
+    <string name="south">South</string>
+    <string name="east">East</string>
+</resources>

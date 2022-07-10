@@ -6,4 +6,19 @@
     <string name="register">Register</string>
     <string name="name">Name</string>
     <string name="confirmpassword">Confirm Password</string>
+    <string name="reserve">Reserve</string>
+    <string name="give">Give</string>
+    <string name="address">Address</string>
+    <string name="postalCode">Postal Code</string>
+    <string name="contactNumber">Contact Number</string>
+    <string name="foodType">Type of food</string>
+    <string name="foodQuantity">Food Quantity</string>
+    <string name="halal">Halal</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="submit">Submit</string>
+    <string name="all">All</string>
+    <string name="north">North</string>
+    <string name="south">South</string>
+    <string name="east">East</string>
 </resources>
